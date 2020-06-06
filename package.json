@@ -41,9 +41,9 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
+    "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-photo-gallery": "^8.0.0",
-    "classnames": "^2.2.6"
+    "react-photo-gallery": "^8.0.0"
   }
 }
