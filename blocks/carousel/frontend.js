@@ -1,9 +1,9 @@
 import Glide from '@glidejs/glide';
 
-const glideEl = document.querySelector('.wp-block-mmblocks-carousel');
+const glideEl = document.querySelector('.wp-block-mmblocks-carousel .glide');
 
 if (glideEl) {
-    const { time, numberOfImages: perView } = glideEl.dataset;
+    const { time, numberOfImages: perView } = glideEl.parentElement.dataset;
 
     new Glide(glideEl, {
         type: 'carousel',
