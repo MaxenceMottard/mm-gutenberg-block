@@ -8,9 +8,9 @@ add_filter( 'block_categories', function( $categories, $post ) {
 		$categories,
 		[
 			[
-                'slug' => 'custom-blocks',
-                'icon' => 'admin-appearance',
-				'title' => __( 'Advanced Custom Blocks', 'gutenbergCustomBlocks' ),
+                'slug' => 'mm-blocks',
+                'icon' => 'hammer',
+				'title' => __( 'Blocks Customs', 'mmblocks' ),
 			],
 		]
 	);

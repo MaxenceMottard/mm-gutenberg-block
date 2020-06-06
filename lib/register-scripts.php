@@ -15,7 +15,7 @@ function register_block_assets() {
 
 	// Register the bundled block JS file
 	wp_register_script(
-		'gutenberg-custom-blocks-editor-js',
+		'mmblocks-editor-js',
 		_get_plugin_url() . $editor_js_path,
 		[ 'wp-plugins', 'wp-element', 'wp-edit-post', 'wp-i18n', 'wp-api-request', 'wp-data', 'wp-components', 'wp-blocks', 'wp-editor', 'wp-compose' ],
 		filemtime( _get_plugin_directory() . $editor_js_path ),
@@ -24,7 +24,7 @@ function register_block_assets() {
 
 	// Register editor only styles
 	wp_register_style(
-		'gutenberg-custom-blocks-editor-css',
+		'mmblocks-editor-css',
 		_get_plugin_url() . $editor_style_path,
 		[],
 		filemtime( _get_plugin_directory() . $editor_style_path )
@@ -32,7 +32,7 @@ function register_block_assets() {
 
 	// Register shared editor and frontend styles
 	wp_register_style(
-		'gutenberg-custom-blocks-css',
+		'mmblocks-css',
 		_get_plugin_url() . $style_path,
 		[],
 		filemtime( _get_plugin_directory() . $style_path )

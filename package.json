@@ -1,11 +1,11 @@
 {
-  "name": "jsforwp-blocks",
+  "name": "mm-gutenberg-blocks",
   "version": "3.0.0",
   "license": "MIT",
   "main": "blocks/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zgordon/advanced-gutenberg-course.git"
+    "url": "https://github.com/MaxenceMottard/mm-gutenberg-block.git"
   },
   "scripts": {
     "start": "cross-env BABEL_ENV=default webpack --watch",
@@ -20,17 +20,8 @@
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "classnames": "^2.2.6",
     "cross-env": "^5.1.5",
     "css-loader": "^0.28.11",
-    "eslint": "^4.19.1",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "node-sass": "^4.9.0",
-    "postcss-loader": "^2.1.5",
-    "raw-loader": "^0.5.1",
-    "sass-loader": "^6.0.7",
-    "style-loader": "^0.19.1",
-    "webpack": "^3.11.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.9.0",
@@ -39,7 +30,20 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "prettier": "^1.19.1"
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.9.0",
+    "postcss-loader": "^2.1.5",
+    "prettier": "^1.19.1",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.11.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-photo-gallery": "^8.0.0",
+    "classnames": "^2.2.6"
+  }
 }

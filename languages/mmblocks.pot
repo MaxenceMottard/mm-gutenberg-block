@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: blocks/carousel/edit.js:29
+msgid "Paramètres du carousel"
+msgstr ""
+
+#: blocks/carousel/edit.js:31
+msgid "Temps de défilement (s)"
+msgstr ""
+
+#: blocks/carousel/edit.js:32
+msgid "La valeur 0 désactive le défilement automatique."
+msgstr ""
+
+#: blocks/carousel/edit.js:39
+msgid "Nombre d'images visibles"
+msgstr ""
+
+#: blocks/carousel/edit.js:52
+#: blocks/carousel/index.js:16
+msgid "Carousel"
+msgstr ""
+
+#: blocks/carousel/edit.js:53
+msgid ""
+"Faites glisser des images, téléchargez de nouvelles images ou sélectionnez "
+"des fichiers dans votre bibliothèque."
+msgstr ""
+
+#: blocks/carousel/index.js:13
+msgid "Carousel d'image"
+msgstr ""
+
+#: blocks/carousel/index.js:16
+msgid "Image"
+msgstr ""

@@ -2,4 +2,4 @@
  * Import example blocks
  */
 
-import './example';
+import './carousel';

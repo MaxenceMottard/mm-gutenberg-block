@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: Gutenberg - Custom Blocks
- * Plugin URI:  https://github.com/MaxenceMottard/gutenberg-blocks-plugin-template
- * Description: Plugin that contains the base to create custom gutenberg blocks
+ * Plugin Name: Carousel - Gutenberg Blocks
+ * Plugin URI:  https://github.com/MaxenceMottard/mm-gutenberg-block
+ * Description: Plugin that contains carousel gutenberg block
  * Version:     1.0.0
  * Author:      Maxence Mottard
  * Author URI:  https://github.com/MaxenceMottard/
- * Text Domain: gutenbergCustomBlocks
+ * Text Domain: mmblocks
  * Domain Path: /languages
  */
 
