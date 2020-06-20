@@ -3,6 +3,27 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
+#: blocks/before-after-image/index.js:10
+msgid "Comparaison avant / après de déux images"
+msgstr ""
+
+#: blocks/before-after-image/index.js:13
+#: blocks/carousel/index.js:13
+msgid "Image"
+msgstr ""
+
+#: blocks/before-after-image/index.js:13
+msgid "Avant"
+msgstr ""
+
+#: blocks/before-after-image/index.js:13
+msgid "Après"
+msgstr ""
+
+#: blocks/before-after-image/index.js:9
+msgid "Avant / Après"
+msgstr ""
+
 #: blocks/carousel/edit.js:29
 msgid "Paramètres du carousel"
 msgstr ""
@@ -20,7 +41,7 @@ msgid "Nombre d'images visibles"
 msgstr ""
 
 #: blocks/carousel/edit.js:52
-#: blocks/carousel/index.js:16
+#: blocks/carousel/index.js:13
 msgid "Carousel"
 msgstr ""
 
@@ -30,10 +51,6 @@ msgid ""
 "des fichiers dans votre bibliothèque."
 msgstr ""
 
-#: blocks/carousel/index.js:13
+#: blocks/carousel/index.js:10
 msgid "Carousel d'image"
-msgstr ""
-
-#: blocks/carousel/index.js:16
-msgid "Image"
 msgstr ""

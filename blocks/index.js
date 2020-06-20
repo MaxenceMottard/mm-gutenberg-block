@@ -3,3 +3,4 @@
  */
 
 import './carousel';
+import './before-after-image';

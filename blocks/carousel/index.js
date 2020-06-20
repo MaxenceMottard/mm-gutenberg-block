@@ -1,6 +1,3 @@
-import Gallery from 'react-photo-gallery';
-import classnames from 'classnames';
-import GlideComponent from './glide-component';
 import './style.scss';
 import icon from './icon';
 import save from './save';
