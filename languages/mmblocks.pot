@@ -3,25 +3,41 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
-#: blocks/before-after-image/index.js:10
-msgid "Comparaison avant / après de déux images"
+#: blocks/before-after-image/edit.js:14
+msgid "Grand"
 msgstr ""
 
-#: blocks/before-after-image/index.js:13
+#: blocks/before-after-image/edit.js:15
+msgid "Petit"
+msgstr ""
+
+#: blocks/before-after-image/edit.js:28
+msgid "Paramètres"
+msgstr ""
+
+#: blocks/before-after-image/edit.js:32
+msgid "Changer la taille des images"
+msgstr ""
+
+#: blocks/before-after-image/index.js:10
+msgid "Avant / Après"
+msgstr ""
+
+#: blocks/before-after-image/index.js:11
+msgid "Comparaison avant / après de deux images"
+msgstr ""
+
+#: blocks/before-after-image/index.js:14
 #: blocks/carousel/index.js:13
 msgid "Image"
 msgstr ""
 
-#: blocks/before-after-image/index.js:13
+#: blocks/before-after-image/index.js:14
 msgid "Avant"
 msgstr ""
 
-#: blocks/before-after-image/index.js:13
+#: blocks/before-after-image/index.js:14
 msgid "Après"
-msgstr ""
-
-#: blocks/before-after-image/index.js:9
-msgid "Avant / Après"
 msgstr ""
 
 #: blocks/carousel/edit.js:29

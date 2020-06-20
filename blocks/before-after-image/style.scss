@@ -1,0 +1,32 @@
+.wp-block-mmblocks-before-after-image {
+  &--edit {
+    display: flex;
+    flex-direction: row;
+
+    & > * {
+      flex: 1;
+    }
+
+    main {
+      margin-right: 10px;
+    }
+  }
+
+  position: relative;
+
+  main {
+
+  }
+
+  aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    img {
+      clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    }
+  }
+}
