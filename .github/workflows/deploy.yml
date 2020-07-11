@@ -32,14 +32,16 @@ jobs:
             | awk -F: '{ print $2 }' \
             | sed 's/[",]//g'
             | tr -d '[[:space:]]')
+      - id: get_version
+        run: echo "::set-output name=version_number::$PLUGIN_VERSION"
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ PLUGIN_VERSION }}
-          release_name: Release ${{ PLUGIN_VERSION }}
+          tag_name: ${{ jobs.build.steps.get_version.outputs.version_number }}
+          release_name: Release ${{ jobs.build.steps.get_version.outputs.version_number }}
           draft: false
           prerelease: false
       - name: Upload Release Asset
