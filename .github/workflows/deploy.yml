@@ -22,7 +22,7 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
           filename: 'mm-gutenberg-blocks.zip'
-          exclusions: '*. /node_modules/ package.json yarn.lock *.js assets blocks'
+          exclusions: '*. node_modules/ package.json yarn.lock *.js assets blocks'
       - name: get-npm-version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@master
