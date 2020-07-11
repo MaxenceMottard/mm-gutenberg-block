@@ -26,6 +26,6 @@ jobs:
       - run: ls -la
       - name: Define version number environment variable
         env:
-          PLUGIN_VERSION: $(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]')
+          PLUGIN_VERSION: "2.0.0"
       - run: echo $PLUGIN_VERSION
 
