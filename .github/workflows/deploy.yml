@@ -22,10 +22,11 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
           filename: 'mm-gutenberg-blocks.zip'
-          exclusions: '*. node_modules/ package.json yarn.lock *.js assets blocks'
+          exclusions: '*.git /*node_modules/* package.json yarn.lock *.js assets blocks'
       - name: get-npm-version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@master
+      - run: echo test ${{ steps.package-version.outputs.current-version }}
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
