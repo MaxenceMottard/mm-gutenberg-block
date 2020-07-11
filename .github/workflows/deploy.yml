@@ -27,5 +27,5 @@ jobs:
       - name: Define version number environment variable
         env:
           PLUGIN_VERSION: "2.0.0"
-      - run: echo $PLUGIN_VERSION
+        run: echo $PLUGIN_VERSION
 
