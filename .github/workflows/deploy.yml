@@ -25,7 +25,31 @@ jobs:
           exclusions: '*. /node_modules/ package.json yarn.lock *.js assets blocks'
       - run: ls -la
       - name: Define version number environment variable
+        run: |
+          export PLUGIN_VERSION=$(cat package.json \
+            | grep version \
+            | head -1 \
+            | awk -F: '{ print $2 }' \
+            | sed 's/[",]//g'
+            | tr -d '[[:space:]]')
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
         env:
-          PLUGIN_VERSION: "2.0.0"
-        run: echo $PLUGIN_VERSION
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ PLUGIN_VERSION }}
+          release_name: Release ${{ PLUGIN_VERSION }}
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+          asset_path: ./mm-gutenberg-blocks.zip
+          asset_name: mm-gutenberg-blocks.zip
+          asset_content_type: application/zip
 
