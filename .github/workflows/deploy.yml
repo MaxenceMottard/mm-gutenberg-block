@@ -1,0 +1,31 @@
+name: SSH
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
+jobs:
+
+  build:
+    name: Deploy on VPS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: build app
+        uses: actions/setup-node@v1
+        with:
+          node-version: 13.11.0
+      - run: yarn install
+      - run: yarn build
+      - name: Archive Release
+          uses: thedoctor0/zip-release@master
+          with:
+            filename: 'mm-gutenberg-blocks.zip'
+            exclusions: '*. /node_modules/ package.json yarn.lock *.js assets blocks'
+      - run: ls -la
+      - name: Define version number environment variable
+        env:
+          PLUGIN_VERSION: $(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]')
+      - run: echo $PLUGIN_VERSION
+
