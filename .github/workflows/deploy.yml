@@ -1,4 +1,4 @@
-name: SSH
+name: Create Release
 on:
   push:
     branches:
@@ -8,7 +8,7 @@ on:
 jobs:
 
   build:
-    name: Deploy on VPS
+    name: build & deploy release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -25,8 +25,7 @@ jobs:
           exclusions: '*. /node_modules/ package.json yarn.lock *.js assets blocks'
       - run: ls -la
       - name: Define version number environment variable
-        run: |
-          export PLUGIN_VERSION=$(cat package.json \
+        run: export PLUGIN_VERSION=$(cat package.json \
             | grep version \
             | head -1 \
             | awk -F: '{ print $2 }' \
