@@ -23,22 +23,17 @@ jobs:
         with:
           filename: 'mm-gutenberg-blocks.zip'
           exclusions: '*. /node_modules/ package.json yarn.lock *.js assets blocks'
-      - run: ls -la
-      - name: Define version number environment variable
-        run: export PLUGIN_VERSION=$(cat package.json \
-            | grep version \
-            | head -1 \
-            | awk -F: \'{ print $2 }\' \
-            | sed \'s/[",]//g\'
-            | tr -d '[[:space:]]')
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ env.PLUGIN_VERSION }}
-          release_name: Release ${{ env.PLUGIN_VERSION }}
+          tag_name: ${{ steps.package-version.outputs.current-version }}
+          release_name: Release ${{ steps.package-version.outputs.current-version }}
           draft: false
           prerelease: false
       - name: Upload Release Asset
